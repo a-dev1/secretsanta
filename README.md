@@ -1,3 +1,3 @@
 # secretsanta
-https://a-dev1.github.io/secretsanta/
+http://buymeagift.co
 This year become a Secret Santa for someone
