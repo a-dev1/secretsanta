@@ -17,7 +17,7 @@ def get_image_url(url):
     response.raise_for_status()
     search_results = response.json()
     if search_results["value"] == []:
-        search_term=search_term.split()[0]
+        search_term=search_term.split()[0]+search_term.split()[1]
         params  = {"q": search_term, "license": "public", "imageType": "photo"}
         response = requests.get(search_url, headers=headers, params=params)
         response.raise_for_status()
