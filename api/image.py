@@ -28,3 +28,7 @@ def get_image_url(url):
     return(thumbnail_urls)
 
 
+def get_gift_name(url):
+    giftname=url.split('/')[3]
+    giftname=search_term.replace('-',' ')
+    return giftname

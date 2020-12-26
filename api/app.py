@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 import os
 from flask_cors import CORS
-from image import get_image_url
+from image import get_image_url,get_gift_name
 
 
 app=Flask(__name__)
@@ -18,13 +18,15 @@ ma =Marshmallow(app)
 
 class Gift(db.Model):
     username=db.Column(db.String(100),primary_key=True)
+    giftname=db.Column(db.String)
     description=db.Column(db.String(200))
     url=db.Column(db.String)
     price = db.Column(db.Float)
     balance = db.Column(db.Float)
 
-    def __init__(self,username,description,url,price,balance):
+    def __init__(self,username,giftname,description,url,price,balance):
         self.username=username
+        self.giftname=get_gift_name(url)
         self.description=description
         self.url=get_image_url(url)
         self.price=price
@@ -32,7 +34,7 @@ class Gift(db.Model):
 
 class GiftSchema(ma.Schema):
     class Meta:
-        fields = ('username','description','url','price','balance')
+        fields = ('username','description','giftname','url','price','balance')
 
 
 
@@ -71,6 +73,12 @@ def pay(username,pay):
     db.session.commit()
 
     return gift_schema.jsonify(gift)
+
+@app.route('/deleteall',methods=['GET'])
+def delete():
+  gifts=db.session.query(Gift).delete()
+  deb.session.commit()
+  return jsonify({'Status':'Users Deleted'})
 
 
 @app.route("/ip", methods=["GET"])
