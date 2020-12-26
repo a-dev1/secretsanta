@@ -10,7 +10,7 @@ app=Flask(__name__)
 basedir = os.path.abspath(os.path.dirname(__file__))
 CORS(app)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('HEROKU_POSTGRESQL_BLUE_URL') or 'sqlite:///' + os.path.join(basedir,'db.sqlite')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL') or 'sqlite:///' + os.path.join(basedir,'db.sqlite')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']= False
 
 db= SQLAlchemy(app)
