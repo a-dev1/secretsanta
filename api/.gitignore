@@ -1,2 +1,3 @@
 db.sqlite
-/venv
+.env
+/.vscode
