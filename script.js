@@ -31,4 +31,4 @@ const hideDetails = () => {
   console.log('hidde details')
   close_details.parentElement.parentElement.parentElement.style.display = 'none';
 }
-// detail_button.addEventListener('click', showDetains);
+detail_button.addEventListener('click', showDetains);
