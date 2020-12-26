@@ -19,3 +19,16 @@ let data = [
   }
 ]
 
+let detail_button = document.querySelector('.show-details');
+let close_details = document.querySelector('.close-cover');
+
+const showDetains = () => {
+  console.log('show details');
+  detail_button.parentElement.parentElement.lastElementChild.style.display = 'block';
+}
+
+const hideDetails = () => {
+  console.log('hidde details')
+  close_details.parentElement.parentElement.parentElement.style.display = 'none';
+}
+// detail_button.addEventListener('click', showDetains);
