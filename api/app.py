@@ -24,7 +24,7 @@ class Gift(db.Model):
     price = db.Column(db.Float)
     balance = db.Column(db.Float)
 
-    def __init__(self,username,giftname,description,url,price,balance):
+    def __init__(self,username,description,url,price,balance):
         self.username=username
         self.giftname=get_gift_name(url)
         self.description=description
@@ -77,7 +77,7 @@ def pay(username,pay):
 @app.route('/deleteall',methods=['GET'])
 def delete():
   gifts=db.session.query(Gift).delete()
-  deb.session.commit()
+  db.session.commit()
   return jsonify({'Status':'Users Deleted'})
 
 
