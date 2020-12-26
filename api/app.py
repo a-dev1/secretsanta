@@ -4,6 +4,7 @@ from flask_marshmallow import Marshmallow
 import os
 from flask_cors import CORS
 from image import get_image_url
+from radar import RadarClient
 
 
 app=Flask(__name__)
@@ -12,6 +13,8 @@ CORS(app)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL') or 'sqlite:///' + os.path.join(basedir,'db.sqlite')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']= False
+radar = RadarClient(os.environ.get('RADAR'))
+
 
 db= SQLAlchemy(app)
 ma =Marshmallow(app)
@@ -22,13 +25,15 @@ class Gift(db.Model):
     url=db.Column(db.String)
     price = db.Column(db.Float)
     balance = db.Column(db.Float)
+    location = db.Column(db.String)
 
-    def __init__(self,username,description,url,price,balance):
+    def __init__(self,username,description,url,price,balance,location):
         self.username=username
         self.description=description
         self.url=get_image_url(url)
         self.price=price
         self.balance=balance
+        self.location=location
 
 class GiftSchema(ma.Schema):
     class Meta:
@@ -45,8 +50,12 @@ def add_gift():
   description = request.json['description']
   url=request.json['url']
   price = request.json['price']
+  long_=request.json['longitude']
+  lat_=request.json['latitude']
+  geocode=radar.geocode.reverse(coordinates=( lat_, long_))
+  location=geocode[0].city+','+geocode[0].country
 
-  new_gift = Gift(username, description,url, price, price)
+  new_gift = Gift(username, description,url, price, price,location)
 
   db.session.add(new_gift)
 
