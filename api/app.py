@@ -73,5 +73,10 @@ def pay(username,pay):
     return gift_schema.jsonify(gift)
 
 
+@app.route("/ip", methods=["GET"])
+def get_my_ip():
+    return jsonify({'ip': request.remote_addr}), 200
+
+
 if __name__ == '__main__':
     app.run(debug=True)
