@@ -6,7 +6,7 @@
   <title>Secret Santa</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="showCards()">
   
   <!-- BANNER -->
   <div class="banner-container">
@@ -24,7 +24,8 @@
     <section class="intro">
       <h1>This Year Be a Secret Santa</h1>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi delectus dolor beatae? Obcaecati esse eum eius! Deserunt impedit neque consequuntur, distinctio id beatae porro quos sint aliquam asperiores iste voluptatum.</p>
-      <button>Help Someone</button>
+      <button href="#cards">Help Someone</button>
+      
     </section>
   </div>
 
@@ -34,7 +35,7 @@
   
 
   <!-- ALL CARDS ARE INSIDE THIS -->
-  <div class="cards">
+  <div class="cards" id="cards">
 
     <!-- CARD-1 -->
     <div class="card-container">
@@ -47,7 +48,7 @@
         <span>Need: $20</span>
       </div>
       <div class="cover-button">
-        <button class="show-details">DONATE</button>
+        <button class="show-details" onclick="showDetains(event)">GIFT</button>
       </div>
 
       <div class="deadly-nested">
@@ -65,7 +66,7 @@
               <span>Need: $10</span>
               <button>PAY</button>
             </div>
-            <button class="close-cover" onclick="hideDetails()">X</button>
+            <button class="close-cover" onclick="hideDetails(event)">X</button>
           </div>
   
         </div>
@@ -73,7 +74,7 @@
 
     </div>
 
-    <div class="card-container">
+    <!-- <div class="card-container">
       <div class="card-header">
         <img src="assets/products/air-pods.jpg" alt="">
         <h2 class="name">RICHARD</h2>
@@ -83,7 +84,7 @@
         <span>Need: $100</span>
       </div>
       <div class="cover-button">
-        <button class="show-details">DONATE</button>
+        <button class="show-details">GIFT</button>
       </div>
     </div>
 
@@ -97,7 +98,7 @@
         <span>Need: $50</span>
       </div>
       <div class="cover-button">
-        <button class="show-details">DONATE</button>
+        <button class="show-details">GIFT</button>
       </div>
     </div>
 
@@ -111,7 +112,7 @@
         <span>Need: $120</span>
       </div>
       <div class="cover-button">
-        <button class="show-details">DONATE</button>
+        <button class="show-details">GIFT</button>
       </div>
     </div>
 
@@ -125,7 +126,7 @@
         <span>Need: $80</span>
       </div>
       <div class="cover-button">
-        <button class="show-details">DONATE</button>
+        <button class="show-details">GIFT</button>
       </div>
     </div>
 
@@ -139,11 +140,11 @@
         <span>Need: $90</span>
       </div>
       <div class="cover-button">
-        <button class="show-details">DONATE</button>
+        <button class="show-details">GIFT</button>
       </div>
     </div>
 
-  </div>
+  </div> -->
 
   <footer>
 
