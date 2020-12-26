@@ -9,10 +9,8 @@
 }
 
 body {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  background-color: #fef6e4;
-  color: #172c66;
   overflow-x: none;
 }
 
@@ -34,6 +32,12 @@ ul li {
   list-style: none;
   font-size: 24px;
   padding: 0px 10px;
+
+}
+
+ul li a {
+  color: #fffffe;
+  text-decoration: none;
 }
 
 .logo-container {
@@ -45,39 +49,43 @@ ul li {
 
 .banner-container {
   width: 100%;
-  height: 400px;
-  background-image: url("assets/gift2.jpg");
+  height: 70vh;
+  background-image: url("assets/gifts1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: none;
 }
 
 .cards {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  grid-gap: 40px;
+  align-content: center;
+  justify-content: center;
   flex-wrap: wrap;
   padding: 50px 100px;
-  background-color: #f3d2c1;
+  background-color: #16161a;
   width: 100%;
 }
 
 .card-container {
   position: relative;
-  width: 400px;
-  height: 600px;
-  border: 1px solid #001858;
+  width: 300px;
+  height: 400px;
+  /* border: 1px solid #001858; */
   border-radius: 4px;
-  background-color: #fff;
+  background-color: #242629;
   margin: 20px;
   box-shadow: -2px -2px 10px rgba(0, 0, 0, 0.2), 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .card-container:hover {
-  box-shadow: -4px -4px 15px rgba(0, 0, 0, 0.3), 4px 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: -5px -5px 18px rgba(0, 0, 0, 0.6), 5px 5px 18px rgba(0, 0, 0, 0.6);
 }
 
 .card-header {
   width: 100%;
-  height: 92%;
+  height: 85%;
   position: relative;
 }
 
@@ -94,19 +102,21 @@ ul li {
   font-weight: 500;
   top: 10px;
   left: 15px;
-  font-size: 30px;
+  font-size: 20px;
+  text-transform: uppercase;
 }
 
 .card-footer {
-  height: 8%;
+  height: 15%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 10px;
+  color: #fffffe;
 }
 
 .card-footer span {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .cover-button {
@@ -128,14 +138,15 @@ ul li {
 }
 
 button {
-  padding: 10px 20px;
-  color: #001858;
-  background-color: #f582ae;
-  font-size: 24px;
-  border: 1px solid #001858;
+  padding: 8px 16px;
+  color: #fffffe;
+  background-color: #7f5af0;
+  font-size: 20px;
   outline: none;
+  border: none;
   transition: 0.2s;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 button:active {
@@ -215,6 +226,7 @@ button:active {
 
 .details button {
   padding: 10px 35px;
+  cursor: pointer;
 }
 
 .close-cover {
@@ -224,4 +236,10 @@ button:active {
   position: absolute;
   top: -10%;
   right: 0;
+}
+
+footer {
+  width: 100%;
+  height: 80px;
+  background-color: #030303;
 }
