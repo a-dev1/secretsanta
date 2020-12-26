@@ -30,5 +30,5 @@ def get_image_url(url):
 
 def get_gift_name(url):
     giftname=url.split('/')[3]
-    giftname=search_term.replace('-',' ')
+    giftname=giftname.replace('-',' ')
     return giftname
