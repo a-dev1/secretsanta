@@ -68,6 +68,7 @@ ul li a {
   text-align: center;
   color: #94a1b2;
   padding: 20px 200px;
+  height: calc(70vh - 86.4px - 86.4px);
 }
 
 .intro h1 {
@@ -79,6 +80,7 @@ ul li a {
   padding: 20px 0;
   font-size: 20px;
 }
+
 .product {
   background-color: #16161a;
   color: #fff;
