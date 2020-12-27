@@ -75,13 +75,16 @@ ul li a:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #94a1b2;
+  color: #5c6879;
   padding: 20px 250px;
   height: calc(70vh - 86.4px - 86.4px);
 }
 
 .intro h1 {
-  font-size: 50px;
+  font-size: 40px;
+  -webkit-text-stroke: 1px rgb(236, 230, 230);
+  text-shadow: 3px 3px 3px #61dafb;
+  letter-spacing: 4px;
 }
 
 .intro p {
