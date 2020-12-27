@@ -10,16 +10,20 @@ const hideDetails = (e) => {
   e.target.parentElement.parentElement.parentElement.style.display = 'none';
 }
 
-// var amt;
+var amt;
 
+const amount=(e)=>{
+  amt = e.target.value;
+  console.log(amt);
+}
 
 
 const payForm = (event) =>{
+  // event.preventDefault()
   const username = event.target.parentElement.firstElementChild.innerHTML
   console.log(username);
-  var amt = document.querySelector(".giftAmount")
-  var x = amt.children
-  console.log(x);
+  console.log(amt);
+  fetch(`https://holidayhacks.herokuapp.com/${username}/pay/${amt}`)
 }
 
 
@@ -57,7 +61,7 @@ let createCard = (item) => {
 
       <form class="payForm">
       <h3 class="payUser">${item.username}</h3>
-      <input type="number" class="giftAmount" placeholder="Enter the amount you wanna gift">
+      <input type="number" class="giftAmount" placeholder="Enter the amount you wanna gift" onkeyup="amount(event)">
       <input type="submit" value="Gift" onclick="payForm(event)">
     </form>
   </div>
