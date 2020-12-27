@@ -325,3 +325,41 @@ button:active {
   padding: 10px 20px !important;
   text-transform: uppercase;
 }
+
+
+footer{
+  height: 40vh;
+  background-color: black;
+  border-top: 2px solid  #61dafb ;
+  display: flex;
+}
+
+.footer_img{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 0.4;
+ color: white;
+ margin-left: 40px;
+ font-weight: 200;
+}
+
+
+
+.footer_text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+.footer_para{
+ text-shadow: 4px 4px 4px  #61dafb;
+ font-size: 1.8rem;
+ -webkit-text-stroke: 1px white;
+ font-style: italic;
+}
+
+.footer_text .logo-container{
+  width: 100%;
+}
