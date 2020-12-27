@@ -25,6 +25,15 @@ body {
 
 }
 
+.form-container img{
+  width: 165px;
+  position: absolute;
+  z-index: 999;
+  margin-top: -58px;
+  margin-left: -50px;
+  transform: rotate(-20deg);
+}
+
 form {
   display: flex;
   flex-direction: column;
