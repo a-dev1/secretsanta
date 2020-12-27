@@ -39,7 +39,7 @@ let createCard = (item) => {
   </div>
   <div class="card-footer">
   <span>${item.giftname.substring(0,13)}</span>
-  <span>Need: $${item.balance}</span>
+  <span>Needed: $${item.balance}</span>
   </div>
   <div class="cover-button">
   <button class="show-details" onclick="showDetains(event)">GIFT</button>
@@ -57,7 +57,7 @@ let createCard = (item) => {
       <h3 >Why ${item.username} need this?</h3>
       <p>${item.description}.</p>
       <span>Need: $${item.balance}</span>
-      <label for="giftAmount">Enter the Amount You wanna gift....</label>
+      <label for="giftAmount">Enter the Amount You want to gift!</label>
 
       <form class="payForm">
       <h3 class="payUser">${item.username}</h3>
