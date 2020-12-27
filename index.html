@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Secret Santa</title>
+  <title>Secret Santa 365</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body onload="showCards()">
@@ -13,11 +13,11 @@
 
     <div class="nav-bar">
       <div class="logo-container">
-        SECRET &nbsp;&nbsp;&nbsp;&nbsp;SANTA
+        SECRET &nbsp;&nbsp;&nbsp;&nbsp;SANTA &nbsp;&nbsp;365
       </div>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="more.html">More</a></li>
+        <li><a href="more.html">Add Wish</a></li>
       </ul>
     </div>
 
@@ -68,7 +68,7 @@
               <label for="giftAmount">Enter the Amount You wanna gift....</label>
               <form id="payForm">
                 <h3 class="payUser">Aditya</h3>
-                <input type="number" id="giftAmount" placeholder="Enter the amount you wanna gift">
+                <input type="number" class="giftAmount" placeholder="Enter the amount you wanna gift" onkeyup="amount(event)">
               <input type="submit" value="submit" onclick="payForm(event)"></input>
               </form>
             </div>
@@ -91,77 +91,3 @@
 </body>
 </html>
 
-
-
-
-
-<!-- COMMENTS -->
-    <!-- <div class="card-container">
-      <div class="card-header">
-        <img src="assets/products/air-pods.jpg" alt="">
-        <h2 class="name">RICHARD</h2>
-      </div>
-      <div class="card-footer">
-        <span>Apple iPods</span>
-        <span>Need: $100</span>
-      </div>
-      <div class="cover-button">
-        <button class="show-details">GIFT</button>
-      </div>
-    </div>
-
-    <div class="card-container">
-      <div class="card-header">
-        <img src="assets/products/pss4.jpg" alt="">
-        <h2 class="name">ADITYA</h2>
-      </div>
-      <div class="card-footer">
-        <span>PS4</span>
-        <span>Need: $50</span>
-      </div>
-      <div class="cover-button">
-        <button class="show-details">GIFT</button>
-      </div>
-    </div>
-
-    <div class="card-container">
-      <div class="card-header">
-        <img src="assets/products/mac-book.jpg" alt="">
-        <h2 class="name">SHELLY SIMON</h2>
-      </div>
-      <div class="card-footer">
-        <span>Mac Book</span>
-        <span>Need: $120</span>
-      </div>
-      <div class="cover-button">
-        <button class="show-details">GIFT</button>
-      </div>
-    </div>
-
-    <div class="card-container">
-      <div class="card-header">
-        <img src="assets/products/coffee-machine.jpg" alt="">
-        <h2 class="name">Frank Smith</h2>
-      </div>
-      <div class="card-footer">
-        <span>Coffee Machine</span>
-        <span>Need: $80</span>
-      </div>
-      <div class="cover-button">
-        <button class="show-details">GIFT</button>
-      </div>
-    </div>
-
-    <div class="card-container">
-      <div class="card-header">
-        <img src="assets/products/sony-headphones.jpg" alt="">
-        <h2 class="name">Toney Rover</h2>
-      </div>
-      <div class="card-footer">
-        <span>Sony Headphones</span>
-        <span>Need: $90</span>
-      </div>
-      <div class="cover-button">
-        <button class="show-details">GIFT</button>
-      </div>
-    </div>-->

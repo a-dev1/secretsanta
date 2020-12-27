@@ -39,12 +39,13 @@ ul li a {
   color: #fffffe;
   text-decoration: none;
   margin: 0 15px;
-  transition: 0.2s;
+  transition: all 0.2s ease;
 }
 
 ul li a:hover {
   color: #61dafb;
   border-top: 3px solid #61dafb;
+  text-shadow: 4px 4px 4px black;
 }
 
 .logo-container {

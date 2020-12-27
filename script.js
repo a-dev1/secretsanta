@@ -10,10 +10,21 @@ const hideDetails = (e) => {
   e.target.parentElement.parentElement.parentElement.style.display = 'none';
 }
 
+var amt;
+
+const amount=(e)=>{
+  amt = e.target.value;
+  console.log(amt);
+}
+
 
 const payForm = (event) =>{
+  event.preventDefault()
   const username = event.target.parentElement.firstElementChild.innerHTML
   console.log(username);
+  console.log(amt);
+  fetch(`https://holidayhacks.herokuapp.com/${username}/pay/${amt}`)
+  setTimeout(function() { window.location.reload() }, 1500);
 }
 
 
@@ -29,7 +40,7 @@ let createCard = (item) => {
   </div>
   <div class="card-footer">
   <span>${item.giftname.substring(0,13)}</span>
-  <span>Need: $${item.balance}</span>
+  <span>Needed: $${item.balance}</span>
   </div>
   <div class="cover-button">
   <button class="show-details" onclick="showDetains(event)">GIFT</button>
@@ -47,12 +58,12 @@ let createCard = (item) => {
       <h3 >Why ${item.username} need this?</h3>
       <p>${item.description}.</p>
       <span>Need: $${item.balance}</span>
-      <label for="giftAmount">Enter the Amount You wanna gift....</label>
+      <label for="giftAmount">Enter the Amount You want to gift!</label>
 
       <form class="payForm">
       <h3 class="payUser">${item.username}</h3>
-      <input type="number" id="giftAmount" placeholder="Enter the amount you wanna gift">
-      <input type="submit" value="submit" onclick="payForm(event)">
+      <input type="number" class="giftAmount" placeholder="Enter the amount you wanna gift" onkeyup="amount(event)">
+      <input type="submit" value="Gift" onclick="payForm(event)">
     </form>
   </div>
   <button class="close-cover" onclick="hideDetails(event)">X</button>
