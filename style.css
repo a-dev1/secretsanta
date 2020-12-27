@@ -44,7 +44,7 @@ ul li a {
 
 ul li a:hover {
   color: #61dafb;
-  border-top: 3px solid aqua;
+  border-top: 3px solid #61dafb;
 }
 
 .logo-container {
