@@ -62,8 +62,8 @@ let createCard = (item) => {
 
       <form class="payForm">
       <h3 class="payUser">${item.username}</h3>
-      <input type="number" class="giftAmount" placeholder="Enter the amount you wanna gift" onkeyup="amount(event)">
-      <input type="submit" value="Gift" onclick="payForm(event)">
+      <input type="number" class="giftAmount" placeholder="Enter the amount" onkeyup="amount(event)">
+      <input class="gift" type="submit" value="Gift" onclick="payForm(event)">
     </form>
   </div>
   <button class="close-cover" onclick="hideDetails(event)">X</button>
@@ -90,20 +90,3 @@ const showCards = () => {
 
 // const payForm = document.querySelectorAll('.payForm');
 
-
-
-
-// FORM
-// const thisForm = document.getElementById('myForm');
-// thisForm.addEventListener('submit', async function (e) {
-//     e.preventDefault();
-//     const formData = new FormData(thisForm).entries()
-//     const response = await fetch('https://holidayhacks.herokuapp.com/gift', {
-//         method: 'POST',
-//         headers: { 'Content-Type': 'application/json' },
-//         body: JSON.stringify(Object.fromEntries(formData))
-//     });
-
-//     const result = await response.json();
-//     console.log(result)
-// });
