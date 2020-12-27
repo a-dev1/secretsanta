@@ -38,6 +38,13 @@ ul li {
 ul li a {
   color: #fffffe;
   text-decoration: none;
+  margin: 0 15px;
+  transition: 0.2s;
+}
+
+ul li a:hover {
+  color: #61dafb;
+  border-top: 3px solid aqua;
 }
 
 .logo-container {
@@ -67,7 +74,7 @@ ul li a {
   justify-content: center;
   text-align: center;
   color: #94a1b2;
-  padding: 20px 200px;
+  padding: 20px 250px;
   height: calc(70vh - 86.4px - 86.4px);
 }
 
@@ -79,6 +86,10 @@ ul li a {
   color: #fffffe;
   padding: 20px 0;
   font-size: 20px;
+}
+
+.intro button {
+  margin-top: 20px;
 }
 
 .product {

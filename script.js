@@ -20,7 +20,7 @@ let createCard = (item) => {
   <h2 class="name">${item.username}</h2>
   </div>
   <div class="card-footer">
-  <span>${item.giftname}</span>
+  <span>${item.giftname.substring(0,13)}</span>
   <span>Need: $${item.balance}</span>
   </div>
   <div class="cover-button">
