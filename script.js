@@ -62,7 +62,7 @@ let createCard = (item) => {
 
       <form class="payForm">
       <h3 class="payUser">${item.username}</h3>
-      <input type="number" class="giftAmount" placeholder="Enter the amount you wanna gift" onkeyup="amount(event)">
+      <input type="number" class="giftAmount" placeholder="Enter the amount" onkeyup="amount(event)">
       <input class="gift" type="submit" value="Gift" onclick="payForm(event)">
     </form>
   </div>
