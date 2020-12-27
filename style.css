@@ -100,7 +100,11 @@ ul li a:hover {
   text-align: center;
   padding: 40px;
   text-decoration: uppercase;
+  letter-spacing: 5px;
 }
+
+
+
 
 .cards {
   display: grid;
@@ -113,7 +117,12 @@ ul li a:hover {
   background-color: #16161a;
   width: 100%;
 }
-
+/* hr{
+  height: 4px;
+  background-color: #f582ae;
+  max-width: 20%;
+  display: flex;
+} */
 .card-container {
   position: relative;
   width: 300px;
