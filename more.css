@@ -29,6 +29,8 @@ form {
   display: flex;
   flex-direction: column;
   padding: 50px;
+  margin: 20px 0;
+  max-height: 80vh;
 }
 
 input,
@@ -68,6 +70,8 @@ textarea {
   background-color: #fff;
   padding: 10px 20px;
   width: 150px;
+  outline: none;
+  cursor: pointer;
 }
 
 .back-to-home a {
