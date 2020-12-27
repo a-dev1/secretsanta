@@ -316,6 +316,14 @@ button:active {
   margin-bottom: 20px;
 }
 
+.gift{
+  padding: 10px 20px !important;
+  outline: none;
+  background-color: aqua;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
 /* form {
   display: flex;
   flex-direction: column;
