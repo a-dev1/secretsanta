@@ -10,10 +10,16 @@ const hideDetails = (e) => {
   e.target.parentElement.parentElement.parentElement.style.display = 'none';
 }
 
+// var amt;
+
+
 
 const payForm = (event) =>{
   const username = event.target.parentElement.firstElementChild.innerHTML
   console.log(username);
+  var amt = document.querySelector(".giftAmount")
+  var x = amt.children
+  console.log(x);
 }
 
 
@@ -51,7 +57,7 @@ let createCard = (item) => {
 
       <form class="payForm">
       <h3 class="payUser">${item.username}</h3>
-      <input type="number" id="giftAmount" placeholder="Enter the amount you wanna gift">
+      <input type="number" class="giftAmount" placeholder="Enter the amount you wanna gift">
       <input type="submit" value="Gift" onclick="payForm(event)">
     </form>
   </div>
