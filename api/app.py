@@ -69,7 +69,8 @@ def pay(username,pay):
     gift=Gift.query.get(username)
 
     gift.balance-=int(pay)
-
+    if gift.balance<0:
+      gift.balance=0
     db.session.commit()
 
     return gift_schema.jsonify(gift)
