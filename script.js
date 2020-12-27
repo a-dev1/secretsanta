@@ -31,14 +31,17 @@ let createCard = (item) => {
   <div class="details-cover">
   
   <div class="details-container">
-  <div class="details-img-container">
-  <img src="${item.url}" alt="">
-  </div>
-  <div class="details">
-  <h1>${item.giftname}</h1>
-  <h3>${item.description}.</p>
-  <span>Need: $${item.balance}</span>
-  <button type="submit">PAY</button>
+    <div class="details-img-container">
+      <img src="${item.url}" alt="">
+    </div>
+    <div class="details">
+      <h1>${item.giftname}</h1>
+      <h3>Why ${item.username} need this?</h3>
+      <p>${item.description}.</p>
+      <span>Need: $${item.balance}</span>
+      <label for="giftAmount">Enter the Amount You wanna gift....</label>
+      <input type="number" id="giftAmount" placeholder="Enter the amount you wanna gift">
+    <button type="submit">PAY</button>
   </div>
   <button class="close-cover" onclick="hideDetails(event)">X</button>
   </div>
@@ -51,7 +54,7 @@ let createCard = (item) => {
   console.log('adding a new card');
 }
 
-
+// Triggered when web page start's loading
 const showCards = () => {
   fetch('https://holidayhacks.herokuapp.com/all')
   .then(response => response.json())
@@ -62,7 +65,17 @@ const showCards = () => {
   .catch((e) => console.log(e));
 }
 
-// document.querySelectorAll('.show-details').forEach(button => {
-//   button.addEventListener('click', showDetains);
-// })
+// FORM
+const thisForm = document.getElementById('myForm');
+thisForm.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const formData = new FormData(thisForm).entries()
+    const response = await fetch('https://holidayhacks.herokuapp.com/gift', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(Object.fromEntries(formData))
+    });
 
+    const result = await response.json();
+    console.log(result)
+});
