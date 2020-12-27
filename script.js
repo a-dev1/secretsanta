@@ -19,11 +19,12 @@ const amount=(e)=>{
 
 
 const payForm = (event) =>{
-  // event.preventDefault()
+  event.preventDefault()
   const username = event.target.parentElement.firstElementChild.innerHTML
   console.log(username);
   console.log(amt);
   fetch(`https://holidayhacks.herokuapp.com/${username}/pay/${amt}`)
+  setTimeout(function() { window.location.reload() }, 1500);
 }
 
 
