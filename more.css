@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow-x: none;
+  background-color: #16161a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.form-container {
+  width: 40%;
+  background: url('assets/red.jpg');
+
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+
+input,
+textarea {
+  font-size: 20px;
+  padding: 8px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  margin-bottom: 10px;
+  color: #fff;
+  outline: none;
+}
+
+::placeholder {
+  color: #fff;
+}
+
+textarea {
+  resize: none;
+}
+
+#postSubmit {
+  color: black;
+  background-color: #fff;
+  padding: 10px 20px;
+  width: 150px;
+  margin-top: 40px;
+}
+
+.back-to-home {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: #fff;
+  padding: 10px 20px;
+  width: 150px;
+}
+
+.back-to-home a {
+  text-decoration: none;
+  color: black;
+}
