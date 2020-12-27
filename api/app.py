@@ -68,7 +68,7 @@ def get_products():
 def pay(username,pay):
     gift=Gift.query.get(username)
 
-    gift.balance=gift.price-int(pay)
+    gift.balance-=int(pay)
 
     db.session.commit()
 

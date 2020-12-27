@@ -22,10 +22,13 @@
     </div>
 
     <section class="intro">
-      <h1>Spread smiles year long</h1>
-      <p>This Holiday Season might not be the same for everyone. Bring a smile on someone's face by helping them buying a Gift for them on Christmas.</p>
-      <button href="#cards" class="scroll-down">Help Someone</button>
+      <h1>Be Secret Santa for Someone for a Whole Year</h1>
+      <p>This Holiday Season might not be the same for everyone. Bring a smile on someone's face by helping them buying a Gift for them on Christmas or on any Holiday throughout the year my making their wishlist come true little by little.</p>
+      <a href="#cards">
+      <button class="scroll-down">Help Someone</button>
+    </a>
     </section>
+
   </div>
 
   <div>
@@ -59,12 +62,15 @@
             </div>
             <div class="details">
               <h1>Kindle PaperWhite</h1>
-              <h3>Why Aditya need this?</h3>
+              <h3 id="#userName">Why Aditya need this?</h3>
               <p>I wanted to buy a Kindle paper white because I wanted to develop the habit of reading good books.</p>
               <span>Need: $10</span>
               <label for="giftAmount">Enter the Amount You wanna gift....</label>
-              <input type="number" id="giftAmount" placeholder="Enter the amount you wanna gift">
-              <button type="submit">PAY</button>
+              <form id="payForm">
+                <h3 class="payUser">Aditya</h3>
+                <input type="number" id="giftAmount" placeholder="Enter the amount you wanna gift">
+              <input type="submit" value="submit" onclick="payForm(event)"></input>
+              </form>
             </div>
             <button class="close-cover" onclick="hideDetails(event)">X</button>
           </div>

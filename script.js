@@ -10,6 +10,14 @@ const hideDetails = (e) => {
   e.target.parentElement.parentElement.parentElement.style.display = 'none';
 }
 
+
+const payForm = (event) =>{
+  const username = event.target.parentElement.firstElementChild.innerHTML
+  console.log(username);
+}
+
+
+
 let createCard = (item) => {
   let card_container = document.createElement('div')
   card_container.classList.add('card-container')
@@ -36,13 +44,17 @@ let createCard = (item) => {
     </div>
     <div class="details">
       <h1>${item.giftname}</h1>
-      <h3>Why ${item.username} need this?</h3>
+      <h3 >Why ${item.username} need this?</h3>
       <p>${item.description}.</p>
       <span>Need: $${item.balance}</span>
       <label for="giftAmount">Enter the Amount You wanna gift....</label>
+
+      <form class="payForm">
+      <h3 class="payUser">${item.username}</h3>
       <input type="number" id="giftAmount" placeholder="Enter the amount you wanna gift">
-      <button type="submit">PAY</button>
-    </div>
+      <input type="submit" value="Gift" onclick="payForm(event)">
+    </form>
+  </div>
   <button class="close-cover" onclick="hideDetails(event)">X</button>
   </div>
   
@@ -65,17 +77,22 @@ const showCards = () => {
   .catch((e) => console.log(e));
 }
 
-// FORM
-const thisForm = document.getElementById('myForm');
-thisForm.addEventListener('submit', async function (e) {
-    e.preventDefault();
-    const formData = new FormData(thisForm).entries()
-    const response = await fetch('https://holidayhacks.herokuapp.com/gift', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(Object.fromEntries(formData))
-    });
+// const payForm = document.querySelectorAll('.payForm');
 
-    const result = await response.json();
-    console.log(result)
-});
+
+
+
+// FORM
+// const thisForm = document.getElementById('myForm');
+// thisForm.addEventListener('submit', async function (e) {
+//     e.preventDefault();
+//     const formData = new FormData(thisForm).entries()
+//     const response = await fetch('https://holidayhacks.herokuapp.com/gift', {
+//         method: 'POST',
+//         headers: { 'Content-Type': 'application/json' },
+//         body: JSON.stringify(Object.fromEntries(formData))
+//     });
+
+//     const result = await response.json();
+//     console.log(result)
+// });
