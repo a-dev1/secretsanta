@@ -41,8 +41,8 @@ let createCard = (item) => {
       <span>Need: $${item.balance}</span>
       <label for="giftAmount">Enter the Amount You wanna gift....</label>
       <input type="number" id="giftAmount" placeholder="Enter the amount you wanna gift">
-    <button type="submit">PAY</button>
-  </div>
+      <button type="submit">PAY</button>
+    </div>
   <button class="close-cover" onclick="hideDetails(event)">X</button>
   </div>
   
