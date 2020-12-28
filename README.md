@@ -20,4 +20,4 @@ Could come up with a beautifully made hacky gift card
 Successfully built a REST API using a DB
 
 # Try it out
-buymeagift.co
+https://buymeagift.co
